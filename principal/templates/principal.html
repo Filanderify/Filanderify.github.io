@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/principal/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static '/principal/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static '/principal/css/slider.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static '/principal/media/favicon-32x32.png' %}">
+    <title>Números Expertos</title>
+</head>
+<body>
+    <!-- Barra de redes sociales -->    
+    <div class="top-bar">
+        <!-- Iconos registro -->
+        <div class="login-icon">
+            <a href="{% url 'session' %}"><i class="fas fa-user"></i> Iniciar Sesión | Registrate</a>
+        </div>
+        <!-- Iconos de redes sociales -->    
+        <div class="social-icons">
+            <span>contacto@numex.com.gt | +502 5537 3915</span>
+            <a href="https://facebook.com/Filanderify" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/Filanderify" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/Filanderify" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/Filanderify" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <!-- Barra de navegación -->
+    <div class="navbar">
+      <a href="#quienes-somos">Quiénes Somos</a>
+      <div class="dropdown">
+          <a href="#" id="servicios-link">Servicios</a>
+          <div class="dropdown-content">
+              <a href="#personal-individual">Personal Individual</a>
+              <a href="#emprendimientos">Emprendimientos</a>
+              <a href="#software">Software</a>
+          </div>
+      </div>
+      <a href="#blog">Blog</a>
+      <a href="#contacto">Contacto</a>
+    </div> 
+    <!-- Slider de Imagenes -->
+    <div class="slideshow-container">
+      <!-- Slides -->
+      <div class="mySlides">
+          <img src="{% static '/principal/media/nmeros-expertos-barra.png' %}">
+      </div>
+      <div class="mySlides">
+          <img src="{% static '/principal/media/11.gif' %}">
+      </div>
+      <div class="mySlides">
+          <img src="{% static '/principal/media/NUMEX-1.gif' %}">
+      </div>
+      <div class="mySlides">
+          <img src="{% static '/principal/media/NUMEX-2.gif' %}">
+      </div>
+      <div class="mySlides">
+          <img src="{% static '/principal/media/nmeros-expertos-barra.png' %}">
+      </div>
+
+      <!-- Prev/Next buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!-- Línea horizontal -->
+<!--    <hr class="nav-divider">-->
+    
+    <!-- Contenido de tu página -->
+<!--    <div style="margin-top: 100px;"> -->
+        <!-- Aquí va el contenido de tu página -->
+    <!--</div> -->
+    <script src="{% static '/principal/js/navbar.js' %}" defer></script>
+    <script src="{% static '/principal/js/slider.js' %}" defer></script>
+</body>
+</html>

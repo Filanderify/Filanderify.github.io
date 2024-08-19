@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Estilos para el contenedor de la presentación */
+    .slideshow-container {
+        position: relative;
+        max-width: 98%;
+        margin: auto;
+    /*    overflow: hidden; */
+    }
+
+    /* Estilo para cada slide */
+    .mySlides {
+        display: none;
+    }
+
+    /* Estilo para las imágenes dentro de cada slide */
+    .mySlides img {
+        width: 98%;
+        height: 550px;
+    }
+
+    /* Estilo para los botones de navegación */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="mySlides">
+            <img src="img1.jpg">
+        </div>
+        <div class="mySlides">
+            <img src="img2.jpg">
+        </div>
+        <div class="mySlides">
+            <img src="img3.jpg">
+        </div>
+        <div class="mySlides">
+            <img src="img4.jpg">
+        </div>
+        <div class="mySlides">
+            <img src="img5.jpg">
+        </div>
+
+        <!-- Prev/Next buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script>
+    let slideIndex = 0;
+    showSlides();
+
+    // Función para mostrar las slides
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 3000); // Cambia la imagen cada 3 segundos
+    }
+
+    // Función para avanzar o retroceder las slides manualmente
+    function plusSlides(n) {
+        slideIndex += n;
+        let slides = document.getElementsByClassName("mySlides");
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        if (slideIndex < 1) { slideIndex = slides.length; }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+    </script>
+</body>
+</html>
