@@ -1,26 +1,56 @@
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
   background: #0f172a;
-  color: white;
-  margin: 0;
+  color: #f1f5f9;
 }
 
-header {
-  background: #1e293b;
-  padding: 20px;
+.hero {
+  background: url("img/mainframe.jpg") center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 12px;
   text-align: center;
 }
 
 section {
-  padding: 20px;
+  padding: 40px;
 }
 
-.project {
-  background: #1e293b;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
 }
+
+.project-card {
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  padding: 10px;
+}
+
+.project-card p {
+  padding: 0 10px 15px;
+}
+
 a {
   color: #38bdf8;
 }
