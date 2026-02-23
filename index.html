@@ -1,54 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>z/OS Engineer</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>z/OS Engineer — Haessler Filander Maldonado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mainframe engineer specialized in IBM z/OS, DB2, CICS, REXX, VSAM and Python. Monitoring, automation and API-led modernization." />
+  <meta name="theme-color" content="#0b1224" />
+
+  <!-- Content Security Policy (para permitir Credly sin JS inline) -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdn.credly.com;
+    img-src 'self' https://images.credly.com data:;
+    style-src 'self' 'unsafe-inline';
+    connect-src 'self' https://www.credly.com https://cdn.credly.com;
+    frame-src https://www.credly.com;
+  ">
+
+  <!-- Favicon / Icons -->
+  <link rel="icon" href="img/favicon.png" sizes="any">
+
+  <!-- Performance -->
+  <link rel="preload" href="img/mainframe-hero.jpg" as="image">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio — Haessler Filander Maldonado (z/OS Engineer)" />
+  <meta property="og:description" content="IBM z/OS | DB2 | CICS | REXX | Python | APIs — Monitoring, automation & modernization" />
+  <meta property="og:image" content="https://filanderify.github.io/img/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://filanderify.github.io/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio — Haessler Filander Maldonado (z/OS Engineer)" />
+  <meta name="twitter:description" content="IBM z/OS | DB2 | CICS | REXX | Python | APIs — Monitoring, automation & modernization" />
+  <meta name="twitter:image" content="https://filanderify.github.io/img/og-cover.jpg" />
 </head>
 <body>
 
-<header class="hero">
-  <div class="hero-text">
-    <h1>Haessler Fílander Maldonado</h1>
-    <p>IBM z/OS | DB2 | CICS | REXX | Python | APIs</p>
-  </div>
-</header>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<section class="about">
-  <h2>About Me</h2>
-  <p>
-    I am a mainframe engineer specialized in IBM z/OS with experience in CICS, REXX, VSAM and Python.
-    I build monitoring solutions, automate operations and modernize legacy systems by integrating them with REST APIs.
-  </p>
-</section>
+  <!-- Navigation -->
+  <header class="topbar" role="banner" aria-label="Primary">
+    <a class="brand" href="#home">
+      <span class="brand-mark">z/OS</span>
+      <span class="brand-text">Engineer</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certs">Certifications</a>
+      <a href="#contact" class="btn btn-accent">Contact</a>
+    </nav>
+  </header>
 
-<section class="projects">
-  <h2>Projects</h2>
+  <!-- Hero -->
+  <section id="home" class="hero" role="region" aria-label="Hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <h1 class="glow">Haessler Filander Maldonado</h1>
+      <p class="subtitle mono">
+        IBM z/OS • DB2 • CICS • REXX • VSAM • Python • APIs
+        <span class="cursor" aria-hidden="true">▋</span>
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="https://github.com/Filanderify" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+  </section>
 
-  <div class="project-card">
-    <img src="img/monitoring.jpg" alt="Monitoring">
-    <h3>Mainframe Monitoring System</h3>
-    <p>REXX scripts extracting CICS metrics and visualizing them with Grafana dashboards.</p>
-  </div>
+  <main id="main">
+    <!-- About -->
+    <section id="about" class="wrap about" role="region" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <p>
+        Soy un ingeniero especializado en <strong>IBM z/OS</strong>, con experiencia en la operación,
+        supervisión y automatización de entornos mainframe orientados a la alta disponibilidad.
+        He trabajado con <strong>CICS, REXX, VSAM, TSO/ISPF, JCL</strong> y <strong>Python</strong>,
+        desarrollando herramientas para monitoreo técnico, validación de procesos y optimización de
+        tareas operativas dentro de sistemas críticos.
+        <br><br>
+        Actualmente estoy fortaleciendo mis conocimientos en <strong>DB2 para z/OS</strong>, utilizando
+        herramientas como <strong>QMF 9.1.0</strong> y <strong>DB Admin Tool 7.2.0</strong> para el análisis de datos,
+        consultas SQL y la exploración de componentes clave del entorno transaccional.
+        Mi enfoque profesional está orientado a mejorar la eficiencia operativa, asegurar la
+        estabilidad de sistemas de misión crítica y apoyar la evolución tecnológica de plataformas legacy.
+      </p>
 
-  <div class="project-card">
-    <img src="img/api.jpg" alt="API">
-    <h3>z/OS REST API Integration</h3>
-    <p>Exposing COBOL and CICS programs as REST services using z/OS Connect.</p>
-  </div>
+      <div class="stats">
+        <div class="stat-card">
+          <span class="stat-value">9<span class="stat-plus">+</span></span>
+          <span class="stat-label">Core Skills</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">24</span>
+          <span class="stat-label">Automations</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">99.9%</span>
+          <span class="stat-label">Ops Reliability Focus</span>
+        </div>
+      </div>
+    </section>
 
-  <div class="project-card">
-    <img src="img/mainframe.jpg" alt="Mainframe">
-    <h3>VSAM Data Processing</h3>
-    <p>Python scripts to process VSAM files and generate clean CSV reports.</p>
-  </div>
-</section>
+    <!-- Skills -->
+    <section id="skills" class="wrap skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills &amp; Tooling</h2>
+      <ul class="tags">
+        <li>z/OS</li><li>TSO/ISPF</li><li>JCL</li><li>DB2 for z/OS</li><li>CICS</li>
+        <li>REXX</li><li>VSAM</li><li>Python</li><li>APIs</li>
+        <li>QMF 9.1.0</li><li>DB Admin Tool 7.2.0</li><li>COBOL basics</li>
+        <li>Grafana</li><li>Shell</li>
+      </ul>
+    </section>
 
-<section class="contact">
-  <h2>Contact</h2>
-  <p>GitHub: <a href="https://github.com/Filanderify">github.com/Filanderify</a></p>
-  <p>Email: filanderify1992@gmail.com</p>
-</section>
+    <!-- Projects -->
+    <section id="projects" class="wrap projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
 
+      <article class="project-card">
+        <picture>
+          <img src="img/monitoring.jpg" alt="Mainframe monitoring dashboard" loading="lazy" />
+        </picture>
+        <div class="project-body">
+          <h3>Mainframe Monitoring System</h3>
+          <p>REXX jobs extracting CICS and z/OS metrics, exposed via REST to feed Grafana dashboards (latency, transactions, regions, queues).</p>
+          <div class="chips">
+            <span>REXX</span><span>CICS</span><span>Grafana</span><span>APIs</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <picture>
+          <img src="img/api.jpg" alt="API integration diagram" loading="lazy" />
+        </picture>
+        <div class="project-body">
+          <h3>z/OS REST API Integration</h3>
+          <p>Exposing COBOL and CICS programs as REST services. Includes auth, payload validation, and monitoring.</p>
+          <div class="chips">
+            <span>APIs</span><span>COBOL</span><span>CICS</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <picture>
+          <img src="img/mainframe.jpg" alt="VSAM data processing" loading="lazy" />
+        </picture>
+        <div class="project-body">
+          <h3>VSAM Data Processing</h3>
+          <p>Python scripts to parse VSAM datasets and produce clean CSVs for downstream analysis and reporting.</p>
+          <div class="chips">
+            <span>VSAM</span><span>Python</span><span>Pandas</span><span>CSV</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Certifications / Credly -->
+    <section id="certs" class="wrap certs" aria-labelledby="certs-title">
+      <h2 id="certs-title">Certificaciones</h2>
+      <p class="muted">Insignias verificadas emitidas a través de Credly.</p>
+
+      <div class="badges-grid">
+        <div class="badge-card">
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="26039266-7467-46a5-8102-0bf66f5fe2bc"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="2d783815-cc7c-4aec-9ec8-7c9476ea727c"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="d8d8d594-6a1a-4933-ad35-9ad1c9253a0e"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="210da61c-5553-40bc-9bdd-3958bbc4064b"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="957beca4-cfba-4289-a5f6-92af224422c4"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="615b6f06-6693-4c91-b314-df0e986981f1"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="4b025c1c-e197-40c3-adc2-dcf0314de710"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="2d1e88e0-37f8-4267-8336-f1a0eddbf455"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="7a1fc7a8-ca58-4646-abbe-a35dd66f57e6"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="19a61e44-6851-4711-a963-86ef140b0fae"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="edec0023-74bf-4205-a2e7-1c0df0220399"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="86bd73cc-0772-4935-bd3d-a9a0f72d8079"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="4990d133-6494-4b3c-bab4-158fad2646c4"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="ee2881b1-b11c-4b0a-b989-565d84f99916"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="d9175a59-04c3-4a74-81f8-6f15f36eaa2a"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="73233484-d2af-4b5e-b0c1-c4a534f78a08"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+          <div
+            data-iframe-width="250"
+            data-iframe-height="250"
+            data-share-badge-id="5ef76fa8-c8af-4fc6-aef5-becb900485e1"
+            data-share-badge-host="https://www.credly.com">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="center" style="margin-top:16px">
+        <a class="btn btn-ghost" href="https://www.credly.com/users/filanderify" target="_blank" rel="noopener">
+          Ver perfil completo en Credly
+        </a>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="wrap timeline" aria-labelledby="timeline-title">
+      <h2 id="timeline-title">Milestones</h2>
+      <ol class="milestones">
+        <li>
+          <span class="dot"></span>
+          <div>
+            <h4>DB2 for z/OS — QMF 9.1.0 &amp; DB Admin Tool 7.2.0</h4>
+            <p>Hands-on with query/reporting flows and DB administration utilities.</p>
+          </div>
+        </li>
+        <li>
+          <span class="dot"></span>
+          <div>
+            <h4>Automation Suite</h4>
+            <p>REXX + JCL pipelines for recurring maintenance and health checks.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="wrap contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>Open to collaboration and knowledge sharing around mainframe modernization.</p>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:filanderify1992@gmail.com" aria-label="Send email to filanderify1992@gmail.com">
+          <span class="contact-title">Email</span>
+          <span class="contact-sub">filanderify1992@gmail.com</span>
+        </a>
+
+        <a class="contact-card" href="https://github.com/Filanderify" target="_blank" rel="noopener">
+          <span class="contact-title">GitHub</span>
+          <span class="contact-sub">github.com/Filanderify</span>
+        </a>
+
+        <a class="contact-card" href="https://www.linkedin.com/in/filanderify/" target="_blank" rel="noopener">
+          <span class="contact-title">LinkedIn</span>
+          <span class="contact-sub">Let’s connect</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="mono">© <span id="year"></span> Haessler Filander Maldonado — z/OS Engineer</p>
+  </footer>
+
+  <!-- Tu JS sin inline (compatible con CSP) -->
+  <script src="app.js"></script>
+
+  <!-- Script oficial de Credly: cargar SOLO una vez, al final -->
+  <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 </body>
 </html>
