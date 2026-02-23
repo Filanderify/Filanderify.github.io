@@ -76,7 +76,7 @@ body{
   background: linear-gradient(to bottom, rgba(5,10,20,.6), rgba(5,10,20,.85));
 }
 .grid-overlay{
-  position:absolute; inset:0; opacity:.18; mix-blend:screen;
+  position:absolute; inset:0; opacity:.18; mix-blend-mode:screen;
   background-image:
     linear-gradient(rgba(34,211,238,.15) 1px, transparent 1px),
     linear-gradient(90deg, rgba(34,211,238,.15) 1px, transparent 1px);
@@ -193,4 +193,59 @@ a:focus-visible,.btn:focus-visible,.contact-card:focus-visible,.project-card:foc
   .nav { display:none; } /* simplifica topbar en móviles muy pequeños */
   .hero { min-height: 68vh; }
   .project-card img{ height: 160px; }
+}
+
+/* ===== Card de visitas (logo + badge) ===== */
+.visits-card{
+  display:flex; gap:16px; align-items:center; justify-content:center;
+  margin:16px auto 0;
+  max-width: 780px; padding:14px;
+  border-radius:16px;
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  border:1px solid rgba(34,211,238,.22);
+  box-shadow: 0 16px 36px rgba(0,0,0,.35);
+}
+
+.visits-left{ flex:0 0 auto }
+.visits-logo{
+  display:block;
+  width: 110px; height: 66px;             /* tamaño compacto tipo banner */
+  object-fit: cover; object-position: center;
+  border-radius:10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.35);
+  border:1px solid rgba(255,255,255,.08);
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.visits-right{ flex:1 1 auto; min-width: 0 }
+.visits-title{
+  color:#bfeff7; letter-spacing:.3px; font-weight:700; margin-bottom:8px;
+  opacity:.9
+}
+.visits-row{ display:flex; flex-wrap:wrap; gap:10px; align-items:center }
+
+/* Badge contenedor: “glass” + hover suave */
+.visits-badge{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 12px; border-radius:12px;
+  background: rgba(17,24,39,.55);
+  border:1px solid rgba(34,211,238,.25);
+  box-shadow: 0 10px 22px rgba(0,0,0,.35);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  text-decoration:none;
+}
+.visits-badge:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.45);
+  filter: brightness(1.04);
+}
+.visits-badge img{ display:block; height:28px }
+
+/* Responsive */
+@media (max-width: 560px){
+  .visits-card{ flex-direction: column; align-items: stretch; }
+  .visits-left{ display:flex; justify-content:center }
+  .visits-logo{ border-radius:50%; width:90px; height:90px; object-fit:cover; }
+  .visits-title{ text-align:center }
+  .visits-row{ justify-content:center }
 }

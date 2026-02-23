@@ -11,7 +11,7 @@
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     script-src 'self' https://cdn.credly.com;
-    img-src 'self' https://images.credly.com data:;
+    img-src 'self' https://images.credly.com https://hits.sh data:;
     style-src 'self' 'unsafe-inline';
     connect-src 'self' https://www.credly.com https://cdn.credly.com;
     frame-src https://www.credly.com;
@@ -332,6 +332,21 @@
 
   <footer class="footer">
     <p class="mono">© <span id="year"></span> Haessler Filander Maldonado — z/OS Engineer</p>
+    <!-- Tarjeta visual (logo + contador) -->
+    <div class="visits-card">
+      <img class="visits-logo" src="img/og-cover.jpg" alt="Haessler Filander Maldonado — z/OS Engineer">
+
+      <div class="visits-info">
+        <div class="visits-title mono">Tráfico del sitio</div>
+
+        <!-- Contenedor glass del badge -->
+        <a class="visits-badge" href="https://hits.sh/filanderify.github.io/" target="_blank" rel="noopener">
+          <img
+            src="https://hits.sh/filanderify.github.io.svg?view=today-total&style=for-the-badge&label=VISITAS&color=22d3ee&labelColor=0f172a"
+            alt="Visitas de hoy y totales">
+        </a>
+      </div>
+    </div>
   </footer>
 
   <!-- Tu JS sin inline (compatible con CSP) -->
