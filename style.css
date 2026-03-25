@@ -119,6 +119,9 @@ p{margin:0 0 14px}
 
 /* ===== Projects ===== */
 .projects{display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:22px}
+.projects h2 {
+  grid-column: 1 / -1;
+}
 .project-card{
   display:flex; flex-direction:column; border-radius: var(--radius); overflow:hidden;
   background: linear-gradient(160deg, rgba(15,23,42,.9), rgba(2,6,23,.9));
@@ -248,4 +251,10 @@ a:focus-visible,.btn:focus-visible,.contact-card:focus-visible,.project-card:foc
   .visits-logo{ border-radius:50%; width:90px; height:90px; object-fit:cover; }
   .visits-title{ text-align:center }
   .visits-row{ justify-content:center }
+}
+.project-featured {
+  border: 1px solid rgba(34,211,238,.35);
+  box-shadow:
+    0 0 0 1px rgba(34,211,238,.1),
+    0 0 40px rgba(34,211,238,.12);
 }
