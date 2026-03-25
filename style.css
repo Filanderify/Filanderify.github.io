@@ -258,3 +258,22 @@ a:focus-visible,.btn:focus-visible,.contact-card:focus-visible,.project-card:foc
     0 0 0 1px rgba(34,211,238,.1),
     0 0 40px rgba(34,211,238,.12);
 }
+/* ===== Code blocks ===== */
+.code-block {
+  background: #020617;
+  border: 1px solid rgba(34,211,238,.25);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 20px 0;
+  overflow-x: auto;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+}
+
+.code-block code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 14px;
+  color: #a3e635; /* 3270 green */
+  line-height: 1.5;
+  display: block;
+  white-space: pre;
+}
